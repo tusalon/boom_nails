@@ -1,12 +1,12 @@
-// utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Uñas de Claudia
+// utils/config-boomnails.js - VERSIÓN MULTI-TENANT CORREGIDA
+// CLIENTE: BoomNails
 
-console.log('🏢 config-negocio.js cargado');
+console.log('🏢 config-boomnails.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = 'ad261b16-6b1a-48d0-b0a6-2182551eaf08'; // ID de Uñas de Claudia
+const NEGOCIO_ID_POR_DEFECTO = 'cb22a06f-9acf-4430-913a-00373c1d00f3'; // ID de BoomNails
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'Uñas de Claudia';
+    return config?.nombre || 'BoomNails';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '58485216';
+    return config?.telefono || '51826569';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'unas.claudia@email.com';
+    return config?.email || 'gortisabel76@icloud.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a Uñas de Claudia!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a BoomNails!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'unas-claudia';
+    return config?.ntfy_topic || 'boom-nails-notifications';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para Uñas de Claudia');
+console.log('✅ config-boomnails.js listo para BoomNails');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);

@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Uñas de Claudia
+// sw.js - Service Worker para BoomNails
 
-const CACHE_NAME = 'unas-claudia-v1';
+const CACHE_NAME = 'boom-nails-v1';
 const urlsToCache = [
-  '/unas_con_claudia/',
-  '/unas_con_claudia/index.html',
-  '/unas_con_claudia/admin.html',
-  '/unas_con_claudia/admin-login.html',
-  '/unas_con_claudia/setup-wizard.html',
-  '/unas_con_claudia/editar-negocio.html',
-  '/unas_con_claudia/manifest.json',
-  '/unas_con_claudia/icons/icon-72x72.png',
-  '/unas_con_claudia/icons/icon-96x96.png',
-  '/unas_con_claudia/icons/icon-128x128.png',
-  '/unas_con_claudia/icons/icon-144x144.png',
-  '/unas_con_claudia/icons/icon-152x152.png',
-  '/unas_con_claudia/icons/icon-192x192.png',
-  '/unas_con_claudia/icons/icon-384x384.png',
-  '/unas_con_claudia/icons/icon-512x512.png'
+  '/boom_nails/',
+  '/boom_nails/index.html',
+  '/boom_nails/admin.html',
+  '/boom_nails/admin-login.html',
+  '/boom_nails/setup-wizard.html',
+  '/boom_nails/editar-negocio.html',
+  '/boom_nails/manifest.json',
+  '/boom_nails/icons/icon-72x72.png',
+  '/boom_nails/icons/icon-96x96.png',
+  '/boom_nails/icons/icon-128x128.png',
+  '/boom_nails/icons/icon-144x144.png',
+  '/boom_nails/icons/icon-152x152.png',
+  '/boom_nails/icons/icon-192x192.png',
+  '/boom_nails/icons/icon-384x384.png',
+  '/boom_nails/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/unas_con_claudia/icons/icon-192x192.png');
+            return caches.match('/boom_nails/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Uñas de Claudia');
+console.log('✅ Service Worker configurado para BoomNails');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);

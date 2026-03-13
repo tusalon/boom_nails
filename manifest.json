@@ -1,20 +1,20 @@
 {
-  "name": "Uñas de Claudia",
-  "short_name": "UñasClaudia",
+  "name": "BoomNails",
+  "short_name": "Boom",
   "description": "Uñas y belleza - Tu espacio de cuidado personal",
-  "start_url": "/unas_con_claudia/",
-  "scope": "/unas_con_claudia/",
+  "start_url": "/boom_nails/",
+  "scope": "/boom_nails/",
   "display": "standalone",
   "background_color": "#ec4899",
   "theme_color": "#ec4899",
   "icons": [
     {
-      "src": "/unas_con_claudia/icons/icon-192x192.png",
+      "src": "/boom_nails/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/unas_con_claudia/icons/icon-512x512.png",
+      "src": "/boom_nails/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
