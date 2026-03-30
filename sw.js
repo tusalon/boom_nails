@@ -1,4 +1,4 @@
-// sw.js - Service Worker para BoomNails
+// sw.js - Service Worker para Boom Nails
 
 const CACHE_NAME = 'boom-nails-v1';
 const urlsToCache = [
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para BoomNails');
+console.log('✅ Service Worker configurado para Boom Nails');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);

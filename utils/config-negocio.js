@@ -1,12 +1,12 @@
-// utils/config-boomnails.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: BoomNails
+// utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
+// CLIENTE: Boom Nails
 
-console.log('🏢 config-boomnails.js cargado');
+console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = 'cb22a06f-9acf-4430-913a-00373c1d00f3'; // ID de BoomNails
+const NEGOCIO_ID_POR_DEFECTO = 'cb22a06f-9acf-4430-913a-00373c1d00f3'; // ID de Boom Nails
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'BoomNails';
+    return config?.nombre || 'Boom Nails';
 };
 
 /**
@@ -140,7 +140,7 @@ window.getEmailNegocio = async function() {
  */
 window.getInstagram = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.instagram || '';
+    return config?.instagram || 'its_isaquintero';
 };
 
 /**
@@ -148,7 +148,7 @@ window.getInstagram = async function() {
  */
 window.getFacebook = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.facebook || '';
+    return config?.facebook || 'Isa GG';
 };
 
 /**
@@ -156,7 +156,7 @@ window.getFacebook = async function() {
  */
 window.getHorarioAtencion = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.horario_atencion || '';
+    return config?.horario_atencion || 'Lun-Vie 9:00-17:00, Sáb 9:00-18:00';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a BoomNails!';
+    return config?.mensaje_bienvenida || '¡Bienvenido a mi pequeño salón de uñas, es un emprendimiento que está comenzando de a poco así que espero que me apoyen ya que mi principal objetivo es brindarles un servicio de calidad !';
 };
 
 /**
@@ -184,7 +184,7 @@ window.getNtfyTopic = async function() {
 };
 
 /**
- * 🔥 Obtiene si el negocio requiere anticipo
+ * 🔥 NUEVA FUNCIÓN: Obtiene si el negocio requiere anticipo
  */
 window.getRequiereAnticipo = async function() {
     const config = await window.cargarConfiguracionNegocio();
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-boomnails.js listo para BoomNails');
+console.log('✅ config-negocio.js listo para Boom Nails');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);
